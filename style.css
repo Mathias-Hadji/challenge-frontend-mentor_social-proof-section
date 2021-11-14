@@ -7,16 +7,17 @@
 body {
     font-family: 'Spartan', Arial, Helvetica, sans-serif;
     font-size: 15px;
+    display: flex;
+    height: 100vh;
 }
 
 .section-social-proof {
     display: grid;
     grid-template: auto auto / 1fr 1fr;
-    grid-gap: 50px;
+    grid-gap: 50px 10px;
+    margin: auto;
     padding: 0 200px;
-    margin-top: 150px;
 }
-
 
 .presentation {
     grid-area: 1 / 1 / 2 / 2;
@@ -27,12 +28,12 @@ body {
 .presentation h2 {
     font-size: 40px;
     color:hsl(300, 43%, 22%);
-    width: 400px;
+    width: 70%;
     margin-bottom: 10px;
 }
 
 .presentation p {
-    width: 500px;
+    width: 80%;
     font-weight: 500;
     color: hsl(303, 10%, 53%);
     line-height: 1.5;
@@ -45,11 +46,11 @@ body {
 .rating-item {
     background: hsl(300, 24%, 96%);
     padding: 15px 30px;
-    margin: 10px 0;
+    margin: 15px 0;
     display: flex;
     align-items: center;
     border-radius: 5px;
-    min-width: 450px;
+
 }
 
 .rating-item:nth-child(2) {
@@ -113,4 +114,90 @@ body {
     font-size: 14px;
     line-height: 1.5;
     quotes: '"' '"';
+}
+
+
+/* ---------- Responsive ---------- */
+
+
+@media screen and (max-width: 1410px) {
+
+    .section-social-proof {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 1085px) {
+
+    body {
+        height: auto;
+    }
+
+    .section-social-proof {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        margin: 100px 0;
+    }
+
+    .presentation {
+        width: 100%;
+        align-items: center;
+    }
+
+    .presentation h2 {
+        text-align: center;
+    }
+
+    .presentation p {
+        text-align: center;
+    }
+
+    .rating {
+        width: 80%;
+    }
+
+    .rating-item {
+        flex-direction: column;
+    }
+
+    .stars {
+        margin-bottom: 10px;
+    }
+
+    .rating-item:nth-child(2) {
+        margin-left: 0px;
+    }
+    
+    .rating-item:nth-child(3) {
+        margin-left: 0px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .testimonial {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .testimonial-card {
+        margin-bottom: 30px;
+        margin-right: 0px;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+
+    .rating {
+        width: 100%;
+    }
+
+    .rating-item p {
+        font-size: 14px;
+    }
 }
